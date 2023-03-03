@@ -10,6 +10,8 @@ txt_content = None
 content = ""
 
 def formatPrompt(str):
+    if str[-1] == ".":
+        str = str[:-1]
     if str.startswith("- "):
         return str[2:]
     if str[1:].startswith(". "):
